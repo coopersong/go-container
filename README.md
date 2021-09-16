@@ -122,6 +122,43 @@ func main() {
 }
 ```
 
+### deque
+
+```go
+package main
+
+import (
+    "fmt"
+    
+    "github.com/coopersong/go-container/deque"
+)
+
+func main() {
+    deque := deque.NewDeque()
+    for i := 0; i <= 6; i++ {
+        if i%2 == 0 {
+            deque.PushFront(i)
+        } else {
+            deque.PushBack(i)
+        }
+    }
+
+    i := 6
+    for !deque.Empty() {
+        front := deque.Front()
+        back := deque.Back()
+        if i%2 == 0 {
+            fmt.Printf("%d is in the front of the deque\n")
+            deque.PopFront()
+        } else {
+            fmt.Printf("%d is in the back of the deque\n")
+            deque.PopBack()
+        }
+        i--
+    }
+}
+```
+
 ## Implementation
 
 ### stack
@@ -135,4 +172,8 @@ func main() {
 ### lru
 
 * map
+* two-way linked-list
+
+### deque
+
 * two-way linked-list
