@@ -148,10 +148,10 @@ func main() {
         front := deque.Front()
         back := deque.Back()
         if i%2 == 0 {
-            fmt.Printf("%d is in the front of the deque\n")
+            fmt.Printf("%d is in the front of the deque\n", front)
             deque.PopFront()
         } else {
-            fmt.Printf("%d is in the back of the deque\n")
+            fmt.Printf("%d is in the back of the deque\n", back)
             deque.PopBack()
         }
         i--
